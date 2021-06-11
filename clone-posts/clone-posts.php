@@ -13,7 +13,7 @@
  * Plugin Name:       Clone Posts
  * Plugin URI:        http://wordpress.org/extend/plugins/clone-posts/
  * Description:       Easily clone (duplicate) Posts, Pages and Custom Post Types, including their custom fields (post_meta).
- * Version:           2.0.0
+ * Version:           2.0.1
  * Requires at least: 5.2
  * Requires PHP:      7.2
  * Author:            George Pattihis
@@ -65,7 +65,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Current plugin version.
  */
-define( 'CLONE_POSTS_VERSION', '2.0.0' );
+define( 'CLONE_POSTS_VERSION', '2.0.1' );
 
 /**
  * The code that runs during plugin activation.

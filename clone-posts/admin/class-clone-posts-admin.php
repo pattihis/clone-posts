@@ -156,7 +156,7 @@ class Clone_Posts_Admin {
 		register_setting(
 			'clone_post_settings',
 			'clone_posts_post_type',
-			[$this,'clonePosts_sanitize_array'],
+			[$this,'clonePosts_sanitize_array']
 		);
 
 		add_settings_field(

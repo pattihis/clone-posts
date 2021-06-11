@@ -5,7 +5,7 @@ Tags: clone posts, clone pages, clone post, clone page, clone, page cloning, pos
 Requires at least: 3.0.1
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,18 @@ Easily clone (duplicate) Posts, Pages and Custom Post Types, including their cus
 
 == Description ==
 
-This is a simple plugin that allows you to clone (dupicate) posts, pages and custom post types in WordPress.
+This is a simple plugin that allows you to clone (duplicate) posts, pages and custom post types in WordPress.
+
+### Features
+
+* Enable clone feature for Posts, Pages or any Custom Post Type (CPT)
+* Clone single Posts/Pages with one click
+* Clone multiple Posts/pages with Bulk feature
+* Set default Status & Date of cloned Posts/Pages
+* Custom fields (post-metadata) are also copied when duplicating a Post
+* Translations ready
+* Free with lifetime updates
+* Build according to best practices and WordPress coding standards
 
 [Changelog](http://wordpress.org/extend/plugins/clone-posts/changelog/)
 
@@ -49,11 +60,14 @@ Of course! "Clone Posts" is compatible with any theme and plugin that follows Wo
 
 == Changelog ==
 
-= 2.0 =
+= 2.0.1 =
+* Trailing comma bug - support earlier PHP versions
+
+= 2.0.0 =
 * Major update - compatible with WP 5.7.x
 * Feature: Compatible with Custom Post Types
 * Feature: Copy custom fields (post-metadata)
 * Feature: Add settings page with options
 
-= 1.0 =
+= 1.0.0 =
 * Initial version
