@@ -214,6 +214,9 @@ class Clone_Posts_Admin {
 	 */
 	public function clonePosts_option_post_type() {
 		$options = maybe_unserialize( get_option('clone_posts_post_type') );
+		if ( !is_array($options) ) {
+			$options = ['post', 'page'];
+		}
 		$exclude_cpt = ['attachment'];
 		$post_types = get_post_types( array( 'public' => true, ), 'objects', 'and' );
 		echo '<fieldset>';
@@ -254,6 +257,10 @@ class Clone_Posts_Admin {
 	 */
 	public function clonePosts_admin_footer() {
 		$options = maybe_unserialize( get_option('clone_posts_post_type') );
+
+		if ( !is_array($options) ) {
+			$options = ['post', 'page'];
+		}
 
 		if ( !in_array(  $GLOBALS['post_type'], $options ) ) {
         	return;
@@ -315,11 +322,11 @@ class Clone_Posts_Admin {
 				foreach ( $post_ids as $post_id ) {
 
 					if ( !current_user_can('edit_post', $post_id) ) {
-						wp_die( __('You are not allowed to clone this post.', $plugin->get_plugin_name) );
+						wp_die( __('You are not allowed to clone this post.', $plugin->get_plugin_name()) );
 					}
 
 					if ( ! $this->clonePosts_clone_single( $post_id )) {
-						wp_die( __('Error cloning post.', $plugin->get_plugin_name) );
+						wp_die( __('Error cloning post.', $plugin->get_plugin_name()) );
 					}
 
 					$cloned++;
@@ -372,6 +379,10 @@ class Clone_Posts_Admin {
 
 		$options = maybe_unserialize( get_option('clone_posts_post_type') );
 
+		if ( !is_array($options) ) {
+			$options = ['post', 'page'];
+		}
+
 		if ( !in_array( $post_type, $options ) ) {
         	return $actions;
 		}
@@ -384,7 +395,7 @@ class Clone_Posts_Admin {
 			'comment_status', 'ping_status', '_status',  'post', 'bulk_edit', 'post_view'), $url );
 		$url = add_query_arg( array( 'action' => 'clone-single', 'post' => $post->ID, 'redirect' => $_SERVER['REQUEST_URI'] ), $url );
 
-		$actions['clone'] =  '<a href=\''.$url.'\'>'.__('Clone', $plugin->get_plugin_name).'</a>';
+		$actions['clone'] =  '<a href=\''.$url.'\'>'.__('Clone', $plugin->get_plugin_name()).'</a>';
 		return $actions;
 	}
 
@@ -404,11 +415,11 @@ class Clone_Posts_Admin {
 		$post_id = (int) $_GET['post'];
 
 		if ( !current_user_can('edit_post', $post_id )) {
-			wp_die( __('You are not allowed to clone this post.', $plugin->get_plugin_name) );
+			wp_die( __('You are not allowed to clone this post.', $plugin->get_plugin_name()) );
 		}
 
 		if ( !$this->clonePosts_clone_single( $post_id )) {
-			wp_die( __('Error cloning post.', $plugin->get_plugin_name) );
+			wp_die( __('Error cloning post.', $plugin->get_plugin_name()) );
 		}
 
 		$sendback = remove_query_arg( array( 'cloned', 'untrashed', 'deleted', 'ids' ), $_GET['redirect'] );
@@ -441,7 +452,7 @@ class Clone_Posts_Admin {
 			'post_password'			=> $p->post_password,
 			'post_excerpt'			=> $p->post_excerpt,
 			'comment_status'		=> $p->comment_status,
-			'post_title'			=> $p->post_title . __('- clone', $plugin->get_plugin_name),
+			'post_title'			=> $p->post_title . __('- clone', $plugin->get_plugin_name()),
 			'post_content'			=> $p->post_content,
 			'post_author'			=> $p->post_author,
 			'to_ping'				=> $p->to_ping,

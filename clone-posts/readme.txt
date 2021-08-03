@@ -2,10 +2,10 @@
 Contributors: lukaszwebmaster, pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: clone posts, clone pages, clone post, clone page, clone, page cloning, post cloning, posts cloning, pages cloning, page copy, page copy paste, post copy, posts copy paste, copy pages, copy posts, copy and paste posts, copy and paste pages, clone, cloning, copy and paste
-Requires at least: 3.0.1
-Tested up to: 5.7
+Requires at least: 5.0
+Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPL2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -59,6 +59,10 @@ Of course! "Clone Posts" is compatible with any theme and plugin that follows Wo
 3. Clone multiple posts
 
 == Changelog ==
+
+= 2.0.2 =
+* Handle Warning about options not being an array
+* Resolve Notice about Undefined property
 
 = 2.0.1 =
 * Trailing comma bug - support earlier PHP versions
