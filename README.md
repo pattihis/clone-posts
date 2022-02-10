@@ -19,5 +19,6 @@ This is a simple plugin that allows you to clone (duplicate) posts, pages and cu
 * Build according to best practices and WordPress coding standards
 
 [Download from WordPress.org](https://wordpress.org/plugins/clone-posts/)
+
 [Changelog](http://wordpress.org/extend/plugins/clone-posts/changelog/)
 
