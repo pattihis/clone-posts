@@ -3,7 +3,7 @@ Contributors: lukaszwebmaster, pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: clone posts, clone pages, clone post, clone page, clone, page cloning, post cloning, posts cloning, pages cloning, page copy, page copy paste, post copy, posts copy paste, copy pages, copy posts, copy and paste posts, copy and paste pages, clone, cloning, copy and paste
 Requires at least: 5.0
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 5.6
 Stable tag: 2.0.2
 License: GPL2
