@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin deactivation
  *
@@ -23,9 +22,9 @@
 class Clone_Posts_Deactivator {
 
 	/**
-	 * Short Description. (use period)
+	 * Fired during plugin deactivation.
 	 *
-	 * Long Description.
+	 * This functions runs all code necessary for plugin's deactivation.
 	 *
 	 * @since    2.0.0
 	 */

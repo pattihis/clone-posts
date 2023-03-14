@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Fired during plugin activation
  *
@@ -31,9 +30,9 @@ class Clone_Posts_Activator {
 	 */
 	public static function activate() {
 
-		update_option('clone_posts_post_status', 'draft');
-		update_option('clone_posts_post_date', 'current');
-		update_option('clone_posts_post_type', ['post']);
+		update_option( 'clone_posts_post_status', 'draft' );
+		update_option( 'clone_posts_post_date', 'current' );
+		update_option( 'clone_posts_post_type', array( 'post' ) );
 
 	}
 

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Define the internationalization functionality
  *
@@ -24,7 +23,7 @@
  * @subpackage Clone_Posts/includes
  * @author     George Pattihis <gpattihis@gmail.com>
  */
-class Clone_Posts_i18n {
+class Clone_Posts_I18n {
 
 
 	/**

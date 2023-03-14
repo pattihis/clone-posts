@@ -1,8 +1,6 @@
 <?php
-
 /**
  * Fired when the plugin is uninstalled.
- *
  *
  * @link       https://profiles.wordpress.org/pattihis/
  * @since      2.0.0
@@ -15,29 +13,34 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
 
-// If we are on a multisite installation clean up all subsites
+// If we are on a multisite installation clean up all subsites.
 if ( is_multisite() ) {
 
-	foreach (get_sites(['fields'=>'ids']) as $blog_id) {
-		switch_to_blog($blog_id);
-		clonePosts_cleanup();
+	foreach ( get_sites( array( 'fields' => 'ids' ) ) as $blog_id_number ) {
+		switch_to_blog( $blog_id_number );
+		clone_posts_cleanup();
 		restore_current_blog();
 	}
-
 } else {
-	clonePosts_cleanup();
+	clone_posts_cleanup();
 }
 
-function clonePosts_cleanup(){
+/**
+ * Cleans up after plugin's uninstallation.
+ *
+ * @since     2.0.0
+ * @return    void
+ */
+function clone_posts_cleanup() {
 
-	// Plugin options
+	// Plugin options.
 	$options = array(
 		'clone_posts_post_status',
 		'clone_posts_post_date',
 		'clone_posts_post_type',
 	);
 
-	// Loop through each option
+	// Loop through each option.
 	foreach ( $options as $option ) {
 		delete_option( $option );
 	}
