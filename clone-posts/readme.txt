@@ -1,19 +1,19 @@
 === Clone Posts ===
-Contributors: lukaszwebmaster, pattihis
+Contributors: pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
 Tags: clone posts, clone pages, clone post, clone page, clone, page cloning, post cloning, posts cloning, pages cloning, page copy, page copy paste, post copy, posts copy paste, copy pages, copy posts, copy and paste posts, copy and paste pages, clone, cloning, copy and paste
-Requires at least: 5.0
-Tested up to: 6.1
-Requires PHP: 5.6
-Stable tag: 2.0.4
-License: GPL2
+Requires at least: 5.3.0
+Tested up to: 6.4.2
+Requires PHP: 7.2
+Stable tag: 2.1.0
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Easily clone (duplicate) Posts, Pages and Custom Post Types, including their custom fields (post_meta)
 
 == Description ==
 
-This is a simple plugin that allows you to clone (duplicate) posts, pages and custom post types in WordPress.
+This is a simple but robust plugin that allows you to clone (duplicate) posts, pages and custom post types in WordPress.
 
 ### Features
 
@@ -23,12 +23,9 @@ This is a simple plugin that allows you to clone (duplicate) posts, pages and cu
 * Set default Status & Date of cloned Posts/Pages
 * Custom fields (post-metadata) are also copied when duplicating a Post
 * Translations ready
-* Free with lifetime updates
-* Build according to best practices and WordPress coding standards
+* Build according to WordPress coding standards
 
 [Changelog](http://wordpress.org/extend/plugins/clone-posts/changelog/)
-
-*Clone Posts* was originally developed by [Lukasz Kostrzewa](https://profiles.wordpress.org/lukaszwebmaster/). The plugin has been adopted and updated by [George Pattihis](https://profiles.wordpress.org/pattihis/) who will continue development.
 
 == Installation ==
 
@@ -59,6 +56,12 @@ Of course! "Clone Posts" is compatible with any theme and plugin that follows Wo
 3. Clone multiple posts
 
 == Changelog ==
+
+= 2.1.0 =
+* Ensure compatibility with WP 6.4.x
+* Settings Page Styling Update
+* Translations Update
+* Coding Standards formatting
 
 = 2.0.4 =
 * Ensure compatibility with WP 6.1.x

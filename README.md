@@ -1,11 +1,11 @@
-# clone-posts
-Cloning posts and pages in WordPress
-
-Easily clone (duplicate) Posts, Pages and Custom Post Types, including their custom fields (post_meta)
+# Clone Posts
+_Cloning posts and pages in WordPress_
 
 ### Description
 
-This is a simple plugin that allows you to clone (duplicate) posts, pages and custom post types in WordPress.
+This is a simple but robust plugin that allows you to easily clone (duplicate) posts, pages and custom post types in WordPress, including their custom fields (post_meta).
+
+![Clone Posts - Settings Page](https://ps.w.org/clone-posts/assets/screenshot-1.jpg)
 
 ### Features
 
@@ -18,7 +18,9 @@ This is a simple plugin that allows you to clone (duplicate) posts, pages and cu
 * Free with lifetime updates
 * Build according to best practices and WordPress coding standards
 
-[Download from WordPress.org](https://wordpress.org/plugins/clone-posts/)
+### WordPress.org
 
-[Changelog](http://wordpress.org/extend/plugins/clone-posts/changelog/)
-
+* [Download from WordPress.org](https://wordpress.org/plugins/clone-posts/)
+* [Changelog](http://wordpress.org/extend/plugins/clone-posts/changelog/)
+* [Browse code](https://plugins.trac.wordpress.org/browser/clone-posts/)
+* [Revision Log](https://plugins.trac.wordpress.org/log/clone-posts)

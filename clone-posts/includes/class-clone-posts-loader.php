@@ -49,7 +49,6 @@ class Clone_Posts_Loader {
 
 		$this->actions = array();
 		$this->filters = array();
-
 	}
 
 	/**
@@ -105,7 +104,6 @@ class Clone_Posts_Loader {
 		);
 
 		return $hooks;
-
 	}
 
 	/**
@@ -122,7 +120,5 @@ class Clone_Posts_Loader {
 		foreach ( $this->actions as $hook ) {
 			add_action( $hook['hook'], array( $hook['component'], $hook['callback'] ), $hook['priority'], $hook['accepted_args'] );
 		}
-
 	}
-
 }

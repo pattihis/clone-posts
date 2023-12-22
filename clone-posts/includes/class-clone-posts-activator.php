@@ -33,7 +33,5 @@ class Clone_Posts_Activator {
 		update_option( 'clone_posts_post_status', 'draft' );
 		update_option( 'clone_posts_post_date', 'current' );
 		update_option( 'clone_posts_post_type', array( 'post' ) );
-
 	}
-
 }

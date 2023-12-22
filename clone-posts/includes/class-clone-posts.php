@@ -66,14 +66,13 @@ class Clone_Posts {
 		if ( defined( 'CLONE_POSTS_VERSION' ) ) {
 			$this->version = CLONE_POSTS_VERSION;
 		} else {
-			$this->version = '2.0.4';
+			$this->version = '2.1.0';
 		}
 		$this->plugin_name = 'clone-posts';
 
 		$this->load_dependencies();
 		$this->set_locale();
 		$this->define_admin_hooks();
-
 	}
 
 	/**
@@ -111,7 +110,6 @@ class Clone_Posts {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-clone-posts-admin.php';
 
 		$this->loader = new Clone_Posts_Loader();
-
 	}
 
 	/**
@@ -128,7 +126,6 @@ class Clone_Posts {
 		$plugin_i18n = new Clone_Posts_I18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
-
 	}
 
 	/**
@@ -142,6 +139,8 @@ class Clone_Posts {
 
 		$plugin_admin = new Clone_Posts_Admin( $this->get_plugin_name(), $this->get_version() );
 
+		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'clone_posts_register_setting' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'clone_posts_admin_page' );
 		$this->loader->add_action( 'admin_footer-edit.php', $plugin_admin, 'clone_posts_admin_footer' );
@@ -150,7 +149,6 @@ class Clone_Posts {
 		$this->loader->add_filter( 'post_row_actions', $plugin_admin, 'clone_posts_post_row_actions', 10, 2 );
 		$this->loader->add_filter( 'page_row_actions', $plugin_admin, 'clone_posts_post_row_actions', 10, 2 );
 		$this->loader->add_action( 'wp_loaded', $plugin_admin, 'clone_posts_wp_loaded' );
-
 	}
 
 	/**
@@ -192,5 +190,4 @@ class Clone_Posts {
 	public function get_version() {
 		return $this->version;
 	}
-
 }

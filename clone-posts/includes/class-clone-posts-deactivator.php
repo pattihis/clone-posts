@@ -29,7 +29,5 @@ class Clone_Posts_Deactivator {
 	 * @since    2.0.0
 	 */
 	public static function deactivate() {
-
 	}
-
 }

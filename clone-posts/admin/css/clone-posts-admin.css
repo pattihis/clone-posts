@@ -1,0 +1,10 @@
+.clone-posts_wrap {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0 16px;
+    max-width: 580px;
+}
+
+.clone-posts.dashicons-admin-page::before {
+    font-size: 24px;
+}

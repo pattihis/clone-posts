@@ -44,5 +44,4 @@ function clone_posts_cleanup() {
 	foreach ( $options as $option ) {
 		delete_option( $option );
 	}
-
 }

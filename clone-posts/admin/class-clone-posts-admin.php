@@ -49,7 +49,17 @@ class Clone_Posts_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version     = $version;
+	}
 
+
+	/**
+	 * Register the stylesheets for the admin area.
+	 *
+	 * @since    2.1.0
+	 */
+	public function enqueue_styles() {
+
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/clone-posts-admin.css', array(), $this->version, 'all' );
 	}
 
 	/**
@@ -67,7 +77,6 @@ class Clone_Posts_Admin {
 			array( $this, 'clone_posts_admin_display' ),
 			null
 		);
-
 	}
 
 	/**
@@ -146,7 +155,6 @@ class Clone_Posts_Admin {
 				'class'     => 'clone-posts',
 			)
 		);
-
 	}
 
 	/**
@@ -157,13 +165,13 @@ class Clone_Posts_Admin {
 	public function clone_posts_option_post_status() {
 		$option = get_option( 'clone_posts_post_status' );
 		?>
-			<select name="clone_posts_post_status" id="clone_posts_post_status">
-				<option value="draft" <?php selected( $option, 'draft' ); ?>>Draft</option>
-				<option value="publish" <?php selected( $option, 'publish' ); ?>>Publish</option>
-				<option value="private" <?php selected( $option, 'private' ); ?>>Private</option>
-				<option value="pending" <?php selected( $option, 'pending' ); ?>>Pending</option>
-			</select>
-			<p>Select the <a href="https://wordpress.org/support/article/post-status/#default-statuses" target="_blank">status</a> of the cloned post</p>
+		<select name="clone_posts_post_status" id="clone_posts_post_status">
+			<option value="draft" <?php selected( $option, 'draft' ); ?>>Draft</option>
+			<option value="publish" <?php selected( $option, 'publish' ); ?>>Publish</option>
+			<option value="private" <?php selected( $option, 'private' ); ?>>Private</option>
+			<option value="pending" <?php selected( $option, 'pending' ); ?>>Pending</option>
+		</select>
+		<p>Select the <a href="https://wordpress.org/support/article/post-status/#default-statuses" target="_blank">status</a> of the cloned post</p>
 		<?php
 	}
 
@@ -175,11 +183,11 @@ class Clone_Posts_Admin {
 	public function clone_posts_option_post_date() {
 		$option = get_option( 'clone_posts_post_date' );
 		?>
-			<select name="clone_posts_post_date" id="clone_posts_post_date">
-				<option value="current" <?php selected( $option, 'current' ); ?>>Current Date/Time</option>
-				<option value="original" <?php selected( $option, 'original' ); ?>>Original Post Date</option>
-			</select>
-			<p>Select if the cloned post will have the same date as the<br>original or if it will be assigned the current date/time</p>
+		<select name="clone_posts_post_date" id="clone_posts_post_date">
+			<option value="current" <?php selected( $option, 'current' ); ?>>Current Date/Time</option>
+			<option value="original" <?php selected( $option, 'original' ); ?>>Original Post Date</option>
+		</select>
+		<p>Select if the cloned post will have the same date as the<br>original or if it will be assigned the current date/time</p>
 		<?php
 	}
 
@@ -243,7 +251,7 @@ class Clone_Posts_Admin {
 		}
 		?>
 		<script type="text/javascript">
-			jQuery(function () {
+			jQuery(function() {
 				jQuery('<option>').val('clone').text('<?php esc_html_e( 'Clone' ); ?>').appendTo("select[name='action']");
 				jQuery('<option>').val('clone').text('<?php esc_html_e( 'Clone' ); ?>').appendTo("select[name='action2']");
 			});
@@ -259,7 +267,6 @@ class Clone_Posts_Admin {
 	public function clone_posts_bulk_action() {
 		global $typenow;
 		$post_type = $typenow;
-		$plugin    = new Clone_Posts();
 
 		// get the action.
 		$wp_list_table = _get_list_table( 'WP_Posts_List_Table' );
@@ -339,7 +346,7 @@ class Clone_Posts_Admin {
 			$sendback
 		);
 
-		wp_redirect( $sendback );
+		wp_safe_redirect( $sendback );
 		exit();
 	}
 
@@ -351,6 +358,7 @@ class Clone_Posts_Admin {
 	public function clone_posts_admin_notices() {
 		global $pagenow;
 
+		//phpcs:disable WordPress.Security.NonceVerification.Recommended
 		if ( 'edit.php' === $pagenow && ! isset( $_GET['trashed'] ) ) {
 			$cloned = 0;
 			if ( isset( $_REQUEST['cloned'] ) && (int) $_REQUEST['cloned'] ) {
@@ -360,7 +368,7 @@ class Clone_Posts_Admin {
 			}
 			if ( $cloned ) {
 				/* translators: %s is the number of clomned posts. */
-				$message = sprintf( _n( '%s Post cloned.', '%s posts cloned.', $cloned ), number_format_i18n( $cloned ) );
+				$message = sprintf( _n( '%s Post cloned.', '%s Posts cloned.', $cloned ), number_format_i18n( $cloned ) );
 				echo '<div class="notice notice-success is-dismissible"><p>' . esc_html( $message ) . '</p></div>';
 			}
 		}
@@ -370,6 +378,9 @@ class Clone_Posts_Admin {
 	 * Filters the array of row action links on the admin table.
 	 *
 	 * @since    2.0.0
+	 *
+	 * @param array   $actions An array of row action links.
+	 * @param WP_Post $post    The post object.
 	 */
 	public function clone_posts_post_row_actions( $actions, $post ) {
 		global $post_type;
@@ -445,7 +456,8 @@ class Clone_Posts_Admin {
 
 		$sendback = add_query_arg( array( 'cloned' => 1 ), $sendback );
 		$sendback = remove_query_arg( array( 'action', 'action2', 'tags_input', 'post_author', 'comment_status', 'ping_status', '_status', 'post', 'bulk_edit', 'post_view' ), $sendback );
-		wp_redirect( $sendback );
+
+		wp_safe_redirect( $sendback );
 		exit();
 	}
 
@@ -504,5 +516,4 @@ class Clone_Posts_Admin {
 
 		return true;
 	}
-
 }

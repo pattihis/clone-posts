@@ -13,13 +13,14 @@
 
 ?>
 
-<div class="wrap">
-	<h1>Clone Posts Settings</h1>
+<h1><span class="dashicons dashicons-admin-page clone-posts"></span>&nbsp;<?php esc_html_e( 'Clone Posts Settings', 'link-juice-keeper' ); ?></h1>
+<h4><?php esc_html_e( 'Easily clone (duplicate) Posts, Pages and Custom Post Types.', 'link-juice-keeper' ); ?></h4>
+<div class="clone-posts_wrap">
 	<form method="post" action="options.php">
 		<?php
-			settings_fields( 'clone_post_settings' );
-			do_settings_sections( 'clone-posts-options' );
-			submit_button();
+		settings_fields( 'clone_post_settings' );
+		do_settings_sections( 'clone-posts-options' );
+		submit_button();
 		?>
 	</form>
 </div>
