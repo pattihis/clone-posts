@@ -18,7 +18,7 @@
  *
  * @package    Clone_Posts
  * @subpackage Clone_Posts/includes
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Clone_Posts_Loader {
 

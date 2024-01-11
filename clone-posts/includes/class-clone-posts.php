@@ -22,7 +22,7 @@
  * @since      2.0.0
  * @package    Clone_Posts
  * @subpackage Clone_Posts/includes
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Clone_Posts {
 
@@ -66,7 +66,7 @@ class Clone_Posts {
 		if ( defined( 'CLONE_POSTS_VERSION' ) ) {
 			$this->version = CLONE_POSTS_VERSION;
 		} else {
-			$this->version = '2.1.0';
+			$this->version = '2.1.1';
 		}
 		$this->plugin_name = 'clone-posts';
 

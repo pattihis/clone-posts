@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Clone Posts\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-22 13:19+0000\n"
+"POT-Creation-Date: 2024-01-11 05:04+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -16,16 +16,21 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.4.2\n"
 "X-Domain: clone-posts"
 
-#: admin/class-clone-posts-admin.php:485
+#: admin/class-clone-posts-admin.php:489
 msgid " - Clone"
 msgstr ""
 
-#: admin/class-clone-posts-admin.php:426
+#: admin/class-clone-posts-admin.php:430
 msgid "Clone"
 msgstr ""
 
 #. Name of the plugin
+#: admin/class-clone-posts-admin.php:75
 msgid "Clone Posts"
+msgstr ""
+
+#: admin/class-clone-posts-admin.php:74
+msgid "Clone Posts Settings"
 msgstr ""
 
 #. Description of the plugin
@@ -34,12 +39,16 @@ msgid ""
 "custom fields (post_meta)."
 msgstr ""
 
-#: admin/class-clone-posts-admin.php:311 admin/class-clone-posts-admin.php:449
+#: admin/class-clone-posts-admin.php:223
+msgid "Enable Clone for the above Post Types"
+msgstr ""
+
+#: admin/class-clone-posts-admin.php:315 admin/class-clone-posts-admin.php:453
 msgid "Error cloning post."
 msgstr ""
 
 #. Author of the plugin
-msgid "George Pattihis"
+msgid "George Pattichis"
 msgstr ""
 
 #. URI of the plugin
@@ -50,6 +59,20 @@ msgstr ""
 msgid "https://profiles.wordpress.org/pattihis/"
 msgstr ""
 
-#: admin/class-clone-posts-admin.php:307 admin/class-clone-posts-admin.php:445
+#. %s is the link to the WordPress Codex about statuses.
+#: admin/class-clone-posts-admin.php:179
+#, php-format
+msgid "Select the %s of the cloned post."
+msgstr ""
+
+#: admin/class-clone-posts-admin.php:194
+msgid "Select the date/time of the cloned post."
+msgstr ""
+
+#: admin/class-clone-posts-admin.php:168
+msgid "status"
+msgstr ""
+
+#: admin/class-clone-posts-admin.php:311 admin/class-clone-posts-admin.php:449
 msgid "You are not allowed to clone this post."
 msgstr ""

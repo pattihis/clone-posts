@@ -1,10 +1,27 @@
+.clone-posts_header {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 550px;
+  margin: 16px 0;
+}
+.clone-posts_header h1 {
+  display: flex;
+  align-items: center;
+}
+
 .clone-posts_wrap {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 0 16px;
-    max-width: 580px;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 0 16px;
+  max-width: 540px;
+}
+
+.clone-posts.dashicons-admin-page {
+  width: 26px;
+  height: 26px;
 }
 
 .clone-posts.dashicons-admin-page::before {
-    font-size: 24px;
+  font-size: 26px;
 }

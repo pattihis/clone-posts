@@ -3,8 +3,8 @@
  * Clone Posts
  *
  * @package           Clone_Posts
- * @author            George Pattihis
- * @copyright         2021 George Pattihis
+ * @author            George Pattichis
+ * @copyright         2021 George Pattichis
  * @license           GPL-2.0-or-later
  * @link              https://profiles.wordpress.org/pattihis/
  * @since             2.0.0
@@ -13,11 +13,11 @@
  * Plugin Name:       Clone Posts
  * Plugin URI:        http://wordpress.org/extend/plugins/clone-posts/
  * Description:       Easily clone (duplicate) Posts, Pages and Custom Post Types, including their custom fields (post_meta).
- * Version:           2.1.0
+ * Version:           2.1.1
  * Requires at least: 5.3.0
  * Tested up to:      6.4.2
  * Requires PHP:      7.2
- * Author:            George Pattihis
+ * Author:            George Pattichis
  * Author URI:        https://profiles.wordpress.org/pattihis/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
@@ -26,7 +26,7 @@
  */
 
 /**
- * Copyright 2021  George Pattihis (gpattihis@gmail.com)
+ * Copyright 2021  George Pattichis (gpattihis@gmail.com)
 
  * "Clone Posts" is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -50,7 +50,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * Current plugin version.
  */
-define( 'CLONE_POSTS_VERSION', '2.1.0' );
+define( 'CLONE_POSTS_VERSION', '2.1.1' );
 
 /**
  * The code that runs during plugin activation.

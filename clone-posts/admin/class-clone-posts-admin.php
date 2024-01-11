@@ -16,7 +16,7 @@
  *
  * @package    Clone_Posts
  * @subpackage Clone_Posts/admin
- * @author     George Pattihis <gpattihis@gmail.com>
+ * @author     George Pattichis <gpattihis@gmail.com>
  */
 class Clone_Posts_Admin {
 
@@ -70,8 +70,8 @@ class Clone_Posts_Admin {
 	public function clone_posts_admin_page() {
 
 		add_options_page(
-			'Clone Posts Settings',
-			'Clone Posts',
+			esc_html__( 'Clone Posts Settings', 'clone-posts' ),
+			esc_html__( 'Clone Posts', 'clone-posts' ),
 			'manage_options',
 			'clone-posts-options',
 			array( $this, 'clone_posts_admin_display' ),
@@ -163,7 +163,9 @@ class Clone_Posts_Admin {
 	 * @since  2.0.0
 	 */
 	public function clone_posts_option_post_status() {
-		$option = get_option( 'clone_posts_post_status' );
+		$option     = get_option( 'clone_posts_post_status' );
+		$status_txt = esc_html__( 'status', 'clone-posts' );
+		$link       = '<a href="https://wordpress.org/support/article/post-status/#default-statuses" target="_blank">' . $status_txt . '</a>';
 		?>
 		<select name="clone_posts_post_status" id="clone_posts_post_status">
 			<option value="draft" <?php selected( $option, 'draft' ); ?>>Draft</option>
@@ -171,8 +173,9 @@ class Clone_Posts_Admin {
 			<option value="private" <?php selected( $option, 'private' ); ?>>Private</option>
 			<option value="pending" <?php selected( $option, 'pending' ); ?>>Pending</option>
 		</select>
-		<p>Select the <a href="https://wordpress.org/support/article/post-status/#default-statuses" target="_blank">status</a> of the cloned post</p>
 		<?php
+		// translators: %s is the link to the WordPress Codex about statuses.
+		echo wp_kses_post( '<p>' . sprintf( __( 'Select the %s of the cloned post.', 'clone-posts' ), $link ) . '</p>' );
 	}
 
 	/**
@@ -187,7 +190,7 @@ class Clone_Posts_Admin {
 			<option value="current" <?php selected( $option, 'current' ); ?>>Current Date/Time</option>
 			<option value="original" <?php selected( $option, 'original' ); ?>>Original Post Date</option>
 		</select>
-		<p>Select if the cloned post will have the same date as the<br>original or if it will be assigned the current date/time</p>
+		<p><?php esc_html_e( 'Select the date/time of the cloned post.', 'clone-posts' ); ?></p>
 		<?php
 	}
 
@@ -216,7 +219,7 @@ class Clone_Posts_Admin {
 				}
 			}
 		}
-		echo '<p>Enable Clone functionality on the selected Post Types</p></fieldset>';
+		echo '<p>' . esc_html__( 'Enable Clone for the above Post Types', 'clone-posts' ) . '</p></fieldset>';
 	}
 
 	/**
