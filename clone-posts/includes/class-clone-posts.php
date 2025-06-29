@@ -66,7 +66,7 @@ class Clone_Posts {
 		if ( defined( 'CLONE_POSTS_VERSION' ) ) {
 			$this->version = CLONE_POSTS_VERSION;
 		} else {
-			$this->version = '2.1.2';
+			$this->version = '2.1.3';
 		}
 		$this->plugin_name = 'clone-posts';
 
@@ -96,18 +96,18 @@ class Clone_Posts {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clone-posts-loader.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-clone-posts-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-clone-posts-i18n.php';
+		require_once plugin_dir_path( __DIR__ ) . 'includes/class-clone-posts-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-clone-posts-admin.php';
+		require_once plugin_dir_path( __DIR__ ) . 'admin/class-clone-posts-admin.php';
 
 		$this->loader = new Clone_Posts_Loader();
 	}

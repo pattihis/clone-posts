@@ -1,11 +1,11 @@
 === Clone Posts ===
 Contributors: pattihis
 Donate link: https://profiles.wordpress.org/pattihis/
-Tags: clone posts, clone pages, clone post, clone page, clone, page cloning, post cloning, posts cloning, pages cloning, page copy, page copy paste, post copy, posts copy paste, copy pages, copy posts, copy and paste posts, copy and paste pages, clone, cloning, copy and paste
+Tags: clone posts, clone pages, duplicate posts, copy posts, post cloning
 Requires at least: 5.3.0
-Tested up to: 6.7.1
+Tested up to: 6.8
 Requires PHP: 7.2
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -57,25 +57,30 @@ Of course! "Clone Posts" is compatible with any theme and plugin that follows Wo
 
 == Changelog ==
 
+= 2.1.3 =
+* Ensure compatibility with WP 6.8
+* Reduced tags to the 5 most useful and relevant ones
+* Ensured full WordPress coding standards compliance (PHPCS)
+
 = 2.1.2 =
-* Ensure compatibility with WP 6.7.x
+* Ensure compatibility with WP 6.7
 
 = 2.1.1 =
 * Settings Page Styling Update
 * Translations Update
 
 = 2.1.0 =
-* Ensure compatibility with WP 6.4.x
+* Ensure compatibility with WP 6.4
 * Settings Page Styling Update
 * Translations Update
 * Coding Standards formatting
 
 = 2.0.4 =
-* Ensure compatibility with WP 6.1.x
+* Ensure compatibility with WP 6.1
 * Maybe Unserialize Meta Values - Thanks @bradvin
 
 = 2.0.3 =
-* Ensure compatibility with WP 6.0.x
+* Ensure compatibility with WP 6.0
 * Remove jQuery and any dependencies
 * Add translation template
 * WP Coding Standards Compliant
@@ -88,7 +93,7 @@ Of course! "Clone Posts" is compatible with any theme and plugin that follows Wo
 * Trailing comma bug - support earlier PHP versions
 
 = 2.0.0 =
-* Major update - compatible with WP 5.7.x
+* Major update - compatible with WP 5.7
 * Feature: Compatible with Custom Post Types
 * Feature: Copy custom fields (post-metadata)
 * Feature: Add settings page with options

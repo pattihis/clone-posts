@@ -314,7 +314,7 @@ class Clone_Posts_Admin {
 						wp_die( esc_html__( 'Error cloning post.', 'clone-posts' ) );
 					}
 
-					$cloned++;
+					++$cloned;
 				}
 
 				$sendback = add_query_arg(
