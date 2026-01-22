@@ -66,7 +66,7 @@ class Clone_Posts {
 		if ( defined( 'CLONE_POSTS_VERSION' ) ) {
 			$this->version = CLONE_POSTS_VERSION;
 		} else {
-			$this->version = '2.1.3';
+			$this->version = '2.1.4';
 		}
 		$this->plugin_name = 'clone-posts';
 

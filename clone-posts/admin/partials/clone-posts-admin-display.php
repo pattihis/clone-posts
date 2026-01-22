@@ -14,9 +14,9 @@
 ?>
 
 <div class="clone-posts_header">
-	<h1><span class="dashicons dashicons-admin-page clone-posts"></span>&nbsp;<?php esc_html_e( 'Clone Posts Settings', 'link-juice-keeper' ); ?></h1>
+	<h1><span class="dashicons dashicons-admin-page clone-posts"></span>&nbsp;<?php esc_html_e( 'Clone Posts Settings', 'clone-posts' ); ?></h1>
 </div>
-<h4><?php esc_html_e( 'Easily clone (duplicate) Posts, Pages and Custom Post Types.', 'link-juice-keeper' ); ?></h4>
+<h4><?php esc_html_e( 'Easily clone (duplicate) Posts, Pages and Custom Post Types.', 'clone-posts' ); ?></h4>
 <div class="clone-posts_wrap">
 	<form method="post" action="options.php">
 		<?php
